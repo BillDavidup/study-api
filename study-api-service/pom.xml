@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>com.dening.study.api</groupId>
+        <artifactId>study-api</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <!-- 服务实现模块 -->
+    <groupId>com.dening.study.api.service</groupId>
+    <artifactId>study-api-service</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>study-api-service</name>
+    <description>study-api-service</description>
+
+    <!-- 模块变量 -->
+    <properties>
+        <java.version>17</java.version>
+    </properties>
+
+    <dependencies>
+        <!-- 内部子模块 -->
+        <dependency>
+            <groupId>com.dening.study.api.common</groupId>
+            <artifactId>study-api-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.dening.study.api.dao</groupId>
+            <artifactId>study-api-dao</artifactId>
+        </dependency>
+
+        <!-- 第三方依赖 -->
+    </dependencies>
+
+</project>
