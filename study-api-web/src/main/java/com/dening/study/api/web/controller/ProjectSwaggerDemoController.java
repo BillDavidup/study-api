@@ -1,11 +1,13 @@
 package com.dening.study.api.web.controller;
 
+import ch.qos.logback.classic.Logger;
 import com.dening.study.api.web.pojo.dto.ProjectInfoDTO;
 import com.dening.study.api.web.pojo.req.ProjectInfoReq;
 import com.dening.study.api.web.pojo.vo.ProjectInfoVO;
 import com.github.xiaoymin.knife4j.annotations.ApiOperationSupport;
 import com.github.xiaoymin.knife4j.annotations.ApiSupport;
 import io.swagger.annotations.ApiOperation;
+import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,6 +21,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(value = "/api/swagger/demo")
 public class ProjectSwaggerDemoController {
+    private Logger logger = (Logger) LoggerFactory.getLogger(ProjectSwaggerDemoController.class);
 
     @ApiOperationSupport(order = 1) // 方法排序
     @ApiOperation(value = "/api/swagger/demo/getProjectInfo")
@@ -28,7 +31,7 @@ public class ProjectSwaggerDemoController {
         ProjectInfoDTO dto = new ProjectInfoDTO();
         Long projectId = req.getProjectId();
         dto.setProjectId(projectId);
-
+        logger.info("/api/swagger/demo/getProjectInfo被调用");
         ProjectInfoVO infoVO = new ProjectInfoVO();
         String projectName = req.getProjectName();
         infoVO.setProjectName(projectName);

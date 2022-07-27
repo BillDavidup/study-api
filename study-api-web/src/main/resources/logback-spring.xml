@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- 输出到控制台 -->
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%red(%d{yyyy-MM-dd HH:mm:ss}) %green([%X{traceId}]) [study-api] %blue([%thread]) [%level] - %m%n</pattern>
+        </encoder>
+    </appender>
+    <!-- error日志 -->
+    <!-- 按日期滚动日志 -->
+    <appender name="ERROR-OUT" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <!-- 日志存放位置 -->
+        <file>logs/error.log</file>
+        <encoder>
+            <pattern>%red(%d{yyyy-MM-dd HH:mm:ss}) %green([%X{traceId}]) [study-api] %blue([%thread]) [%level] - %m%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>ERROR</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>logs/error.%d{yyyy-MM-dd}.log.zip</fileNamePattern>
+            <!-- 保存30天历史 -->
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+    </appender>
+
+    <!-- info日志 -->
+    <!-- 按文件大小滚动日志 -->
+    <appender name="INFO-OUT"
+              class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logs/info.log</file>
+        <encoder>
+            <pattern>%red(%d{yyyy-MM-dd HH:mm:ss}) %green([%X{traceId}]) [study-api] %blue([%thread]) [%level] - %m%n</pattern>
+        </encoder>
+        <filter class="ch.qos.logback.classic.filter.LevelFilter">
+            <level>INFO</level>
+            <onMatch>ACCEPT</onMatch>
+            <onMismatch>DENY</onMismatch>
+        </filter>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>logs/info.%d{yyyy-MM-dd}.log.zip</fileNamePattern>
+            <!-- 保存30天历史 -->
+            <maxHistory>30</maxHistory>
+        </rollingPolicy>
+    </appender>
+
+    <!-- 配置好前面对应的appender -->
+    <root level="info">
+        <appender-ref ref="STDOUT"/>
+        <appender-ref ref="ERROR-OUT"/>
+        <appender-ref ref="INFO-OUT"/>
+    </root>
+</configuration>
