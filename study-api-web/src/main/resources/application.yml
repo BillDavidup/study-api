@@ -1,0 +1,15 @@
+#这里可以在每个环境配置redis，数据库（mysql），消息（kafka）等相关的组件的配置
+server:
+  port: 8085
+  tomcat:
+    max-threads: 3000
+#选择哪一个环境的配置
+spring:
+  profiles:
+    active:
+  mvc:
+    servlet:
+      path: /
+# knife4j开启增强功能
+knife4j:
+  enable: true

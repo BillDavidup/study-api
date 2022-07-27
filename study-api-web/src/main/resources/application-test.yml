@@ -1,0 +1,3 @@
+knife4j:
+  # 生产环境屏蔽资源
+  production: false
