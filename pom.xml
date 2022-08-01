@@ -59,11 +59,16 @@
             </dependency>
 
             <!-- 第三方依赖管理 -->
+<!--            <dependency>-->
+<!--                <groupId>org.yaml</groupId>-->
+<!--                <artifactId>snakeyaml</artifactId>-->
+<!--                <version>1.30</version>-->
+<!--            </dependency>-->
             <!-- 接口文档knife4j替代swagger -->
             <dependency>
                 <groupId>com.github.xiaoymin</groupId>
                 <artifactId>knife4j-spring-boot-starter</artifactId>
-                <version>3.0.3</version>
+                <version>2.0.4</version>
             </dependency>
 
         </dependencies>

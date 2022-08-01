@@ -46,6 +46,10 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>org.yaml</groupId>-->
+        <!--            <artifactId>snakeyaml</artifactId>-->
+        <!--        </dependency>-->
         <!-- 接口文档knife4j替代swagger -->
         <dependency>
             <groupId>com.github.xiaoymin</groupId>

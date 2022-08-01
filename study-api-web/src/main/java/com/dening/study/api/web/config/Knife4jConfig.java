@@ -15,11 +15,12 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 public class Knife4jConfig {
     @Bean(value = "defaultApi2")
     public Docket defaultApi2() {
+        // 文档访问地址 该服务的ip:port/doc.html
         Docket docket = new Docket(DocumentationType.SWAGGER_2)
                 .apiInfo(new ApiInfoBuilder()
                         .title("study-api")
                         .description("对外提供HTTP服务的接口文档")
-                        // .termsOfServiceUrl("http://www.xx.com/")
+                        .termsOfServiceUrl("http://study-api.com/doc.html")
                         .contact(new Contact("study-api模板项目", "git@github.com:BillDavidup/study-api.git", "1336038558@qq.com"))
                         .version("1.0")
                         .build())
