@@ -1,3 +1,8 @@
 knife4j:
   # 生产环境屏蔽资源
   production: false
+# nacos
+nacos:
+  config:
+    server-addr: 127.0.0.1:8848
+    namespace: 56e78ba0-554d-4bc7-8371-1668e9fafb51

@@ -9,6 +9,8 @@ public class ProjectInfoVO {
     String projectName;
     @ApiModelProperty(name = "项目描述", value = "该项目用于swagger接口文档的测试")
     String projectDesc;
+    @ApiModelProperty(name = "nacos配置的值", value = "nacos配置的值1")
+    String nacosValue;
 
     public String getProjectName() {
         return projectName;
@@ -24,5 +26,13 @@ public class ProjectInfoVO {
 
     public void setProjectDesc(String projectDesc) {
         this.projectDesc = projectDesc;
+    }
+
+    public String getNacosValue() {
+        return nacosValue;
+    }
+
+    public void setNacosValue(String nacosValue) {
+        this.nacosValue = nacosValue;
     }
 }
