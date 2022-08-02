@@ -71,6 +71,14 @@
                 <version>2.0.4</version>
             </dependency>
 
+            <!-- Nacos: 统一配置中心和服务注册中心（未使用） -->
+            <!-- 官方文档：https://nacos.io/zh-cn/index.html -->
+            <dependency>
+                <groupId>com.alibaba.boot</groupId>
+                <artifactId>nacos-config-spring-boot-starter</artifactId>
+                <version>0.2.12</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
 

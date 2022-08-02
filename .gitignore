@@ -32,3 +32,6 @@ build/
 ### VS Code ###
 .vscode/
 /logs/
+
+### MacOS文件屏蔽
+*.DS_Store
