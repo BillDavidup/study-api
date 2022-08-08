@@ -32,6 +32,7 @@ build/
 ### VS Code ###
 .vscode/
 /logs/
+**/logs/*
 
 ### MacOS文件屏蔽
 *.DS_Store
