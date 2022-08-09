@@ -1,7 +1,8 @@
 # 责任链设计模式
 ## 使用场景
 - 任务流程场景
-- 审核流程装换
+- 审核流程转换
+- 请求过滤场景
 ## 原理
 - 模板模式、策略模式、职责链模式这三种模式具有相同的作用：复用和扩展，在实际的项目开发中比较常用，特别是框架开发中，
 我们可以利用它们来提供框架的扩展点，能够让框架的使用者在不修改框架源码的情况下，基于扩展点定制化框架的功能。
@@ -27,3 +28,4 @@ git@github.com:BillDavidup/study-api.git
 - [深入设计模式](https://refactoringguru.cn/design-patterns/chain-of-responsibility)
 - [责任链模式（以及变种管道模式）的应用案例](https://blog.csdn.net/xiaofeng10330111/article/details/123956717)
 - [设计模式之责任链模式及典型应用](https://cloud.tencent.com/developer/article/1385914)
+- [代码越写越乱？那是因为你没用责任链！](https://mp.weixin.qq.com/s/22zRMa-xM1AYhdKsAH60rA)
