@@ -32,7 +32,7 @@
         <module>study-api-web</module>
     </modules>
 
-    <!-- 统一依赖版本管理 -->
+    <!-- 统一依赖版本管理，子模块需要根据需要引入 -->
     <dependencyManagement>
         <dependencies>
 
@@ -96,6 +96,17 @@
 
         </dependencies>
     </dependencyManagement>
+
+    <!-- 所有子模块继承的依赖 -->
+    <dependencies>
+        <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.24</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
 
     <!-- 整个项目构建插件配置-->
     <build>

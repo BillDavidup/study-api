@@ -36,3 +36,7 @@ build/
 
 ### MacOS文件屏蔽
 *.DS_Store
+
+### 屏蔽掉mybatis generator生成的模板代码
+
+**/mybatis-generator/generated-files/**
