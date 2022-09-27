@@ -91,7 +91,9 @@
                 <configuration>
                     <!--配置文件的位置-->
                     <configurationFile>src/main/resources/mybatis-generator/config/generatorConfig.xml</configurationFile>
+                    <!-- 允许移动生成的文件 -->
                     <verbose>true</verbose>
+                    <!-- 允许覆盖生产的文件 -->
                     <overwrite>true</overwrite>
                 </configuration>
                 <executions>
