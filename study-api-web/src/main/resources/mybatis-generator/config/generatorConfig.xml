@@ -20,12 +20,12 @@
             <!-- annotation's option(boolean) -->
             <property name="builder.fluent" value="true"/>
             <!-- annotation's option(String) -->
-            <property name="builder.builderMethodName" value="myBuilder"/>
+            <property name="builder.builderMethodName" value="build"/>
             <property name="accessors" value="true"/>
             <!-- annotation's option(array of String) -->
             <property name="accessors.prefix" value="m_, _"/>
             <!-- disable annotations -->
-            <property name="allArgsConstructor" value="false"/>
+            <property name="allArgsConstructor" value="true"/>
         </plugin>
 
         <commentGenerator>
