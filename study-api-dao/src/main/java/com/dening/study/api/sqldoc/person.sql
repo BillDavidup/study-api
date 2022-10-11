@@ -19,3 +19,7 @@ alter table `test_person`
     add index idx_first_name (`first_name`, `name`);
 alter table `test_person`
     add unique key uk_id_num (`id_num`);
+# 初始化测试数据
+INSERT INTO `learn_person` (`first_name`, `name`, `age`, `id_num`, `birth_time`, `work_status`, `is_del`, `create_time`, `update_time`) VALUES ('John', 'Snow', 28, '110009899808190012', '2020-01-01 00:00:00', 1, 0, 0, 0);
+INSERT INTO `learn_person` (`first_name`, `name`, `age`, `id_num`, `birth_time`, `work_status`, `is_del`, `create_time`, `update_time`) VALUES ('Peter', 'Make', 23, '352224992082129908', '2020-01-01 00:00:00', 0, 0, 0, 0);
+
