@@ -48,6 +48,7 @@ public interface TestPersonMapper {
      * This method corresponds to the database table test_person
      *
      * @mbg.generated
+     *
      */
     int updateByPrimaryKey(TestPerson row);
 }

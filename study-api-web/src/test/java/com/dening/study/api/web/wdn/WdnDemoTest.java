@@ -1,15 +1,21 @@
 package com.dening.study.api.web.wdn;
 
+import com.dening.study.api.mybatis.dao.LearnPersonDao;
 import com.dening.study.api.mybatis.dao.TestPersonMapper;
+import com.dening.study.api.mybatis.dao.model.LearnPersonModel;
 import com.dening.study.api.mybatis.dao.model.TestPerson;
 import com.dening.study.api.web.base.RunSpringBootApplicationTestBase;
 import org.junit.jupiter.api.Test;
-import org.springframework.beans.factory.annotation.Autowired;
+
+import javax.annotation.Resource;
 
 public class WdnDemoTest extends RunSpringBootApplicationTestBase {
 
-    @Autowired
+    @Resource
     TestPersonMapper testPersonMapper;
+
+    @Resource
+    LearnPersonDao learnPersonDao;
 
     @Test
     public void testWdnDemo() {
@@ -20,5 +26,7 @@ public class WdnDemoTest extends RunSpringBootApplicationTestBase {
     public void testMapper() {
         TestPerson testPerson = testPersonMapper.selectByPrimaryKey(1L);
         System.out.println("testPerson: " + testPerson);
+        LearnPersonModel model = learnPersonDao.selectByPrimaryKey(2L);
+        System.out.println("model: " + model);
     }
 }

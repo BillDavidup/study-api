@@ -1,5 +1,5 @@
-drop table if exists `test_person`;
-CREATE TABLE `test_person`
+drop table if exists `learn_person`;
+CREATE TABLE `learn_person`
 (
     `id`          bigint(20)  NOT NULL AUTO_INCREMENT COMMENT '自增主健',
     `first_name`  varchar(80) NOT NULL DEFAULT '无名' COMMENT '姓氏',
@@ -15,9 +15,9 @@ CREATE TABLE `test_person`
 ) ENGINE = InnoDB
   DEFAULT CHARSET = utf8mb4
   COLLATE = utf8mb4_bin COMMENT '测试人员表';
-alter table `test_person`
+alter table `learn_person`
     add index idx_first_name (`first_name`, `name`);
-alter table `test_person`
+alter table `learn_person`
     add unique key uk_id_num (`id_num`);
 # 初始化测试数据
 INSERT INTO `learn_person` (`first_name`, `name`, `age`, `id_num`, `birth_time`, `work_status`, `is_del`, `create_time`, `update_time`) VALUES ('John', 'Snow', 28, '110009899808190012', '2020-01-01 00:00:00', 1, 0, 0, 0);
