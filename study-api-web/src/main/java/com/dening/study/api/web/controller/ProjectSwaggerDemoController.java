@@ -5,6 +5,7 @@ import com.dening.study.api.service.NacosDemoService;
 import com.dening.study.api.web.pojo.dto.ProjectInfoDTO;
 import com.dening.study.api.web.pojo.req.ProjectInfoReq;
 import com.dening.study.api.web.pojo.vo.ProjectInfoVO;
+import com.dening.study.api.web.result.Result;
 import com.github.xiaoymin.knife4j.annotations.ApiOperationSupport;
 import com.github.xiaoymin.knife4j.annotations.ApiSupport;
 import io.swagger.annotations.ApiOperation;
@@ -30,7 +31,7 @@ public class ProjectSwaggerDemoController {
     @ApiOperationSupport(order = 1) // 方法排序
     @ApiOperation(value = "/api/swagger/demo/getProjectInfo")
     @PostMapping("/getProjectInfo")
-    public ProjectInfoDTO getProjectInfo(@RequestBody ProjectInfoReq req) {
+    public Result<ProjectInfoDTO> getProjectInfo(@RequestBody ProjectInfoReq req) {
 
         ProjectInfoDTO dto = new ProjectInfoDTO();
         Long projectId = req.getProjectId();
@@ -43,6 +44,6 @@ public class ProjectSwaggerDemoController {
         infoVO.setNacosValue(nacosDemoService.getDemoNacosParam());
         dto.setInfoVO(infoVO);
 
-        return dto;
+        return Result.createOK(dto);
     }
 }

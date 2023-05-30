@@ -3,7 +3,7 @@ package com.dening.study.api.web.config.exception;
 import com.alibaba.fastjson.JSON;
 import com.dening.study.api.common.exception.GlobalExceptionMsgEnum;
 import com.dening.study.api.common.exception.uncheck.BusinessException;
-import com.dening.study.api.common.result.Result;
+import com.dening.study.api.web.result.Result;
 import org.apache.commons.lang3.exception.ExceptionUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

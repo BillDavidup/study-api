@@ -3,7 +3,7 @@
     <!-- 输出到控制台 -->
     <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
-            <pattern>%red(%d{yyyy-MM-dd HH:mm:ss}) %green([%X{traceId}]) [study-api] %blue([%thread]) [%level] - %m%n</pattern>
+            <pattern>%red(%d{yyyy-MM-dd HH:mm:ss}) [study-api] %green([%X{TRACE_ID}]) %blue([%thread]) [%level] - %m%n</pattern>
         </encoder>
     </appender>
     <!-- error日志 -->
@@ -12,7 +12,7 @@
         <!-- 日志存放位置 -->
         <file>logs/error.log</file>
         <encoder>
-            <pattern>%red(%d{yyyy-MM-dd HH:mm:ss}) %green([%X{traceId}]) [study-api] %blue([%thread]) [%level] - %m%n</pattern>
+            <pattern>%red(%d{yyyy-MM-dd HH:mm:ss}) [study-api] %green([%X{TRACE_ID}]) [%level] - %m%n</pattern>
         </encoder>
         <filter class="ch.qos.logback.classic.filter.LevelFilter">
             <level>ERROR</level>
@@ -32,7 +32,7 @@
               class="ch.qos.logback.core.rolling.RollingFileAppender">
         <file>logs/info.log</file>
         <encoder>
-            <pattern>%red(%d{yyyy-MM-dd HH:mm:ss}) %green([%X{traceId}]) [study-api] %blue([%thread]) [%level] - %m%n</pattern>
+            <pattern>%red(%d{yyyy-MM-dd HH:mm:ss}) [study-api] %green([%X{TRACE_ID}]) %blue([%thread]) [%level] - %m%n</pattern>
         </encoder>
         <filter class="ch.qos.logback.classic.filter.LevelFilter">
             <level>INFO</level>

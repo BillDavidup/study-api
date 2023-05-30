@@ -1,7 +1,7 @@
 package com.dening.study.api.web.controller.exception;
 
 import com.dening.study.api.common.exception.uncheck.BusinessException;
-import com.dening.study.api.common.result.Result;
+import com.dening.study.api.web.result.Result;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;

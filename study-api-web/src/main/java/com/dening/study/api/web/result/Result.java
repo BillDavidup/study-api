@@ -1,8 +1,9 @@
-package com.dening.study.api.common.result;
+package com.dening.study.api.web.result;
 
 import com.dening.study.api.common.exception.GlobalExceptionMsgEnum;
 import lombok.Getter;
 import lombok.Setter;
+import org.slf4j.MDC;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -21,6 +22,7 @@ public class Result<T> implements Serializable {
     private String code;
     private String msg;
     private T data;
+    private String traceId;
 
 
     public Result() {
@@ -30,6 +32,7 @@ public class Result<T> implements Serializable {
         super();
         this.code = code;
         this.msg = msg;
+        this.traceId = MDC.get("TRACE_ID");
     }
 
     public Result(String code, String msg, T data) {
@@ -37,6 +40,7 @@ public class Result<T> implements Serializable {
         this.code = code;
         this.msg = msg;
         this.data = data;
+        this.traceId = MDC.get("TRACE_ID");
     }
 
     public Result(GlobalExceptionMsgEnum globalExceptionMsgEnum) {
@@ -44,6 +48,7 @@ public class Result<T> implements Serializable {
         this.code = globalExceptionMsgEnum.getCode();
         this.msg = globalExceptionMsgEnum.getMsg();
         this.data = null;
+        this.traceId = MDC.get("TRACE_ID");
     }
 
     /***
